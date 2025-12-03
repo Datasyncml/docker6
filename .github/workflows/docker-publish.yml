@@ -20,7 +20,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: prajushapandian/nodejslab6   # YOUR Docker Hub repo name
+          images: shyaan01/lab06   # YOUR Docker Hub repo name
 
   push_to_registry:
     name: Build and Push Docker image to Docker Hub
@@ -42,5 +42,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ needs.prepare_metadata.outputs.tags }}
-          labels: ${{ needs.prepare_metadata.outputs.labels }}
+          tags: shyaan1/lab06:latest
+        
